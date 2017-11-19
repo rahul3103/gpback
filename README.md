@@ -3,7 +3,7 @@
 Make sure you have -
 
 * installed `packages` via `pip install -r requirements.txt`.
-* updated the `settings` to point at the fronntend server and cheanged your `db settings`  
+* updated the `settings` to point at the fronntend server and changed your `db settings`  
 * now start `python app.py` running on  `localhost:5000`
 
 ### Also hosted at
