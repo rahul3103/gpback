@@ -2,3 +2,6 @@ flask
 flask-login
 psycopg2
 peewee
+uwsgi
+flask_cors
+rauth
