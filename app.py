@@ -1,4 +1,4 @@
-from flask import Flask, redirect, jsonify, request
+from flask import Flask, redirect, jsonify, request, render_template
 from flask_login import LoginManager, login_user, logout_user,\
     current_user, login_required
 from oauth import OAuthSignIn
@@ -66,6 +66,9 @@ def me():
         return (jsonify(listings=[listing.to_dict([Listing.user, Listing.id]) for listing in listings], user=user.to_dict())), 200
     return jsonify({'user_authentication': False}), 400
 
+@app.route('/privacy')
+def privacy():
+    return render_template('policy.html')
 
 @app.route('/listing/<source>', methods=['POST'])
 @login_required
